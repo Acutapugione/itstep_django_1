@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table table-dark table-striped-columns ">
+    {% for key, val in data.items %}
+    
+    <tr >
+        <td class="text-danger">
+            {{ key }}
+        </td>
+        {% for left, right in val.items %}
+        <td class="text-success">
+            {{ left }} * {{ key }} = {{ right }}
+        </td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+
+</table>
+{% endblock content %}
